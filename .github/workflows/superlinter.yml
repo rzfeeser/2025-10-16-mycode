@@ -2,7 +2,11 @@
 name: Lint
 
 on: # yamllint disable-line rule:truthy
-  push: null
+  push:
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+      - '.github/workflows/**'
   pull_request: null
 
 permissions: {}
