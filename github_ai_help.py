@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-app.py - basic Flask application with comments
+app.py - basic Flask application with my comments
 
 Usage:
     pip install flask
