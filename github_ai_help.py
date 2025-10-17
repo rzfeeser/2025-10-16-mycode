@@ -21,12 +21,14 @@ def index():
     # Returning a simple string results in a text/html response by default
     return "Hello, World!"
 
+
 # JSON example route: returns a JSON object with a message
 @app.route("/json")
 def hello_json():
     """returns string in json format - rzfeeser"""
     # jsonify serializes the given kwargs into a JSON response with appropriate headers
     return jsonify(message="Hello, JSON!")
+
 
 # Echo endpoint: supports GET (query params) and POST (JSON body)
 @app.route("/echo", methods=["GET", "POST"])
@@ -46,12 +48,14 @@ def echo():
     # If no JSON was provided, echo query parameters (request.args is an ImmutableMultiDict)
     return jsonify(echo=request.args.to_dict())
 
+
 # Health check route: useful for container orchestration/readiness probes
 @app.route("/health")
 def health():
     """returns json OK"""
     # Return a minimal JSON health status
     return jsonify(status="ok")
+
 
 # When executed directly, run the development server.
 # For production, use a WSGI server (gunicorn, uWSGI, etc.).
