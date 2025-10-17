@@ -14,6 +14,7 @@ from flask import Flask, request, jsonify
 # Create the Flask application instance
 app = Flask(__name__)
 
+
 # Root route: returns a plain text greeting
 @app.route("/")
 def index():
