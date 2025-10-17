@@ -58,4 +58,4 @@ def health():
 if __name__ == "__main__":
     # Bind to all interfaces (0.0.0.0) so the app is reachable from other containers/hosts.
     # debug=True enables the debugger and auto-reload; disable in production.
-        app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
